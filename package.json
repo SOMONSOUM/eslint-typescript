@@ -8,7 +8,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "dev": "ts-node-dev --respawn --transpileOnly --ignore-watch node_modules --no-notify src/index.ts",
+    "dev": "ts-node-dev -r tsconfig-paths/register --respawn --transpileOnly --ignore-watch node_modules --no-notify src/index.ts",
     "build": "tsc",
     "prettier": "prettier --write src/index.ts"
   },
@@ -22,7 +22,8 @@
     "husky": "^4.2.5",
     "prettier": "2.0.5",
     "pretty-quick": "^2.0.1",
-    "ts-node-dev": "^1.0.0-pre.49"
+    "ts-node-dev": "^1.0.0-pre.49",
+    "tsconfig-paths": "^3.9.0"
   },
   "husky": {
     "hooks": {

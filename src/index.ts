@@ -1,5 +1,6 @@
 import express from 'express';
 import { config } from 'dotenv';
+import '@Controllers/UsersController';
 
 config();
 
@@ -10,6 +11,8 @@ app.get('/', (req, res) => {
     `<h1 style='font-size: 36pt; color: blue; text-align: center; padding-top: 3rem;'>Hello, World!<h1/>`
   );
 });
+
+app.get('/users');
 
 app
   .listen(process.env.PORT, () => {
